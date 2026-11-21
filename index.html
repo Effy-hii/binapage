@@ -116,11 +116,11 @@ a:focus-visible { outline: 3px solid var(--peach); outline-offset: 3px; border-r
 
 .offer-title { font-size: clamp(32px, 4.2vw, 50px); text-align: center; }
 .offer-sub { text-align: center; color: var(--muted); font-size: clamp(18px, 1.6vw, 20px); margin-top: 10px; }
-.products { display: grid; gap: clamp(56px, 7vw, 88px); margin-top: clamp(40px, 6vw, 68px); }
-.product { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 68px); align-items: center; }
-.product:nth-child(even) .product-photo { order: 2; }
-.product-photo { border-radius: 20px; overflow: hidden; }
-.product-photo img { height: auto; object-fit: contain; }
+.products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: clamp(36px, 5vw, 56px); align-items: start; }
+.product { display: grid; align-content: start; gap: 22px; background: var(--mist); border-radius: 22px; padding: 14px 14px 30px; }
+.product-body { padding-inline: 14px; }
+.product-photo { border-radius: 16px; overflow: hidden; aspect-ratio: 1500 / 675; background: var(--line); }
+.product-photo img { width: 100%; height: 100%; object-fit: cover; }
 .product-photo figcaption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .product-body { display: grid; gap: 14px; justify-items: start; }
 .tag { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; color: var(--copper); }
@@ -170,7 +170,9 @@ cite strong { color: var(--navy); font-weight: 700; display: block; font-size: 1
   .climb li { grid-template-columns: minmax(0, 1fr); gap: 3px; padding: 16px 18px; }
   .climb h3 { margin-bottom: 4px; }
   .arrow { justify-self: start; transform: rotate(-90deg); margin-block: 3px; width: 28px; }
-  .product:nth-child(even) .product-photo { order: 0; }
+  .products { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .product { padding: 10px 10px 24px; }
+  .product-body { padding-inline: 10px; }
   .product-body { justify-items: stretch; }
   .tag { justify-self: start; }
 }
@@ -281,7 +283,7 @@ cite strong { color: var(--navy); font-weight: 700; display: block; font-size: 1
       <p class="offer-sub">אפשר להזמין כל מפגש בנפרד, או את שניהם כמסלול אחד.</p>
       <div class="products">
         <article class="product">
-          <figure class="product-photo"><img src="images/lecture.jpg" alt="הרצאה לתלמידי ישיבת מעלה אדומים" width="1500" height="900" loading="lazy"></figure>
+          <figure class="product-photo"><img src="images/lecture.jpg" alt="הרצאה לתלמידי ישיבת מעלה אדומים" width="1500" height="900"></figure>
           <div class="product-body">
             <p class="tag"><b>1</b>הרצאה לצוות ולתלמידים</p>
             <h3>מעוף הציפור</h3>
@@ -295,7 +297,7 @@ cite strong { color: var(--navy); font-weight: 700; display: block; font-size: 1
           </div>
         </article>
         <article class="product">
-          <figure class="product-photo"><img src="images/workshop.jpg" alt="סדנה לצוות ישיבת אורות שאול" width="1500" height="675" loading="lazy"></figure>
+          <figure class="product-photo"><img src="images/workshop.jpg" alt="סדנה לצוות ישיבת אורות שאול" width="1500" height="675"></figure>
           <div class="product-body">
             <p class="tag"><b>2</b>סדנה מעשית לצוות הר"מים</p>
             <h3>בית היוצר</h3>
