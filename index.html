@@ -93,13 +93,14 @@ a:focus-visible { outline: 3px solid var(--peach); outline-offset: 3px; border-r
 .demo { margin-top: 44px; }
 .demo-note { font-size: 15px; font-weight: 700; color: var(--copper); margin-bottom: 16px; }
 .demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.demo-grid li { background: var(--white); border-radius: 16px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
-.demo-grid figure { aspect-ratio: 16 / 9; background: var(--white); border-bottom: 1px solid var(--line); overflow: hidden; }
-.demo-grid img { object-position: top center; }
+.demo-grid li { background: var(--white); border-radius: 16px; overflow: hidden; display: grid; grid-template-rows: 1fr auto; }
+.demo-grid figure { border-top: 1px solid var(--line); }
+.demo-grid img { aspect-ratio: 2 / 1; height: auto; object-position: top center; }
 .demo-grid figure.center img { object-position: center; }
-.demo-text { padding: 18px 22px 22px; display: grid; gap: 4px; }
+.demo-grid figcaption { font-size: 14px; color: var(--muted); padding: 10px 22px 14px; border-top: 1px solid var(--line); }
+.demo-text { padding: 20px 22px 18px; display: grid; gap: 6px; align-content: start; }
 .demo-text h3 { font-size: 20px; }
-.demo-text p { color: var(--navy); font-weight: 500; }
+.demo-text p { color: var(--ink); }
 
 .preida { background: var(--navy-deep); color: var(--white); }
 .preida-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
@@ -158,7 +159,8 @@ cite strong { color: var(--navy); font-weight: 700; display: block; font-size: 1
   .marquee-track img { height: 56px; }
   .demo { margin-top: 32px; }
   .demo-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .demo-text { padding: 14px 18px 18px; }
+  .demo-text { padding: 16px 18px 14px; }
+  .demo-grid figcaption { padding: 9px 18px 12px; }
   .noise { gap: 4px 18px; margin-top: 32px; }
   .noise span:nth-child(3n+1) { font-size: 24px; }
   .noise span:nth-child(3n) { font-size: 20px; }
@@ -264,10 +266,10 @@ cite strong { color: var(--navy); font-weight: 700; display: block; font-size: 1
       <div class="demo">
         <p class="demo-note">דוגמה מסדנה בישיבת בית אל: הלכות חשמל בשבת</p>
         <ul class="demo-grid">
-          <li><figure><img src="images/demo-sources.jpg" alt="טבלת עשרת מקורות היסוד לחקר החשמל בשבת, שהופקה בחיפוש עמוק" width="1000" height="558" loading="lazy"></figure><div class="demo-text"><h3>מקורות</h3><p>חיפוש עמוק וארגון החומר במחברת מקורות</p></div></li>
-          <li><figure><img src="images/demo-opening.jpg" alt="הצעה לפתיחת שיעור: חמ&quot;ל שבת, דילמת רכז הביטחון" width="782" height="447" loading="lazy"></figure><div class="demo-text"><h3>הכנת שיעור</h3><p>פתיחה, מענה לקטעים קשים ודף מקורות</p></div></li>
-          <li><figure class="center"><img src="images/demo-image.jpg" alt="איור קנה של סיידין בשתי גרסאות: קנה קצר וקנה ארוך" width="1000" height="563" loading="lazy"></figure><div class="demo-text"><h3>המחשה</h3><p>תמונה מדויקת שממחישה את הסוגיה</p></div></li>
-          <li><figure class="center"><img src="images/demo-infographic.jpg" alt="אינפוגרפיקה: שורשי איסור החשמל בשבת, מפת שיטות הפוסקים" width="1000" height="558" loading="lazy"></figure><div class="demo-text"><h3>תוצרים</h3><p>מצגת, אינפוגרפיקה ומשחק לימודי</p></div></li>
+          <li><div class="demo-text"><h3>מקורות</h3><p>סורקת מאמרים, פסקים ותשובות, ומחזירה רשימת מקורות מסודרת עם הפניה לכל אחד.</p></div><figure><img src="images/demo-sources.jpg" alt="טבלת עשרת מקורות היסוד לחקר החשמל בשבת, שהופקה בחיפוש עמוק" width="1000" height="558" loading="lazy"><figcaption>דוגמה: עשרת מקורות היסוד לחקר החשמל בשבת</figcaption></figure></li>
+          <li><div class="demo-text"><h3>הכנת שיעור</h3><p>מציעה כמה פתיחות לשיעור, מזהה מראש את הקטעים שיקשו על התלמידים ומכינה שאלות הבנה בכמה רמות.</p></div><figure><img src="images/demo-opening.jpg" alt="הצעה לפתיחת שיעור: חמ&quot;ל שבת, דילמת רכז הביטחון" width="782" height="447" loading="lazy"><figcaption>דוגמה: פתיחה לשיעור, "חמ"ל שבת"</figcaption></figure></li>
+          <li><div class="demo-text"><h3>המחשה</h3><p>יוצרת תמונה מדויקת לפי הסוגיה, כך שהתלמיד רואה את המציאות שהגמרא מדברת עליה.</p></div><figure class="center"><img src="images/demo-image.jpg" alt="איור קנה של סיידין בשתי גרסאות: קנה קצר וקנה ארוך" width="1000" height="563" loading="lazy"><figcaption>דוגמה: קנה של סיידין, קצר וארוך</figcaption></figure></li>
+          <li><div class="demo-text"><h3>תוצרים</h3><p>הופכת את אותו חומר למצגת, לאינפוגרפיקה, למפת חשיבה או למשחק לימודי.</p></div><figure class="center"><img src="images/demo-infographic.jpg" alt="אינפוגרפיקה: שורשי איסור החשמל בשבת, מפת שיטות הפוסקים" width="1000" height="558" loading="lazy"><figcaption>דוגמה: מפת שיטות הפוסקים בחשמל בשבת</figcaption></figure></li>
         </ul>
       </div>
     </div>
